@@ -10,6 +10,9 @@ export class PhotoService{
     constructor(private http: HttpClient){}
 
     listFromUser(userName: string){
+
+      console.log(userName);
+
       return this.http
         .get<Photo[]>(API);
     }
